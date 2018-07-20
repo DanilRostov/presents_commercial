@@ -1,4 +1,4 @@
-## React Express starter
+## Presents commercial version
 
 `npm install` - install server-side dependencies
 
