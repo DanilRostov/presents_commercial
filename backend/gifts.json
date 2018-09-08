@@ -1,0 +1,234 @@
+{
+  "toys": [
+    { 
+      "id": 1,
+      "name": "Игрушка 1",
+      "desciption": "Описание игрушки 1",
+      "composition": [
+        {
+          "title": "Конфеты 1",
+          "amount": 5
+        },
+        {
+          "title": "Конфеты 2",
+          "amount": 15
+        },
+        {
+          "title": "Конфеты 3",
+          "amount": 20
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Игрушка 2",
+      "desciption": "Описание игрушки 2",
+      "composition": [
+        {
+          "title": "Конфеты 17",
+          "amount": 5
+        },
+        {
+          "title": "Конфеты 21",
+          "amount": 15
+        },
+        {
+          "title": "Конфеты 23",
+          "amount": 20
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Игрушка 3",
+      "desciption": "Описание игрушки 3",
+      "composition": [
+        {
+          "title": "Конфеты 6",
+          "amount": 56
+        },
+        {
+          "title": "Конфеты 87",
+          "amount": 20
+        },
+        {
+          "title": "Конфеты 4",
+          "amount": 20
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Игрушка 4",
+      "desciption": "Описание игрушки 4",
+      "composition": [
+        {
+          "title": "Конфеты 12",
+          "amount": 5
+        },
+        {
+          "title": "Конфеты 6",
+          "amount": 15
+        },
+        {
+          "title": "Конфеты 33",
+          "amount": 20
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Игрушка 5",
+      "desciption": "Описание игрушки 5",
+      "composition": [
+        {
+          "title": "Конфеты 1",
+          "amount": 5
+        },
+        {
+          "title": "Конфеты 2",
+          "amount": 15
+        },
+        {
+          "title": "Конфеты 3",
+          "amount": 20
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Игрушка 6",
+      "desciption": "Описание игрушки 6",
+      "composition": [
+        {
+          "title": "Конфеты 1",
+          "amount": 5
+        },
+        {
+          "title": "Конфеты 2",
+          "amount": 15
+        },
+        {
+          "title": "Конфеты 3",
+          "amount": 20
+        }
+      ]
+    }
+  ],
+  "bags": [
+    {
+      "id": 1,
+      "name": "Мешочек 1",
+      "desciption": "Описание мешочка 1",
+      "composition": [
+        {
+          "title": "Конфеты 1",
+          "amount": 5
+        },
+        {
+          "title": "Конфеты 2",
+          "amount": 15
+        },
+        {
+          "title": "Конфеты 3",
+          "amount": 20
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Мешочек 2",
+      "desciption": "Описание мешочка 2",
+      "composition": [
+        {
+          "title": "Конфеты 1",
+          "amount": 5
+        },
+        {
+          "title": "Конфеты 2",
+          "amount": 15
+        },
+        {
+          "title": "Конфеты 3",
+          "amount": 20
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Мешочек 3",
+      "desciption": "Описание мешочка 3",
+      "composition": [
+        {
+          "title": "Конфеты 1",
+          "amount": 5
+        },
+        {
+          "title": "Конфеты 2",
+          "amount": 15
+        },
+        {
+          "title": "Конфеты 3",
+          "amount": 20
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Мешочек 4",
+      "desciption": "Описание мешочка 4",
+      "composition": [
+        {
+          "title": "Конфеты 1",
+          "amount": 5
+        },
+        {
+          "title": "Конфеты 2",
+          "amount": 15
+        },
+        {
+          "title": "Конфеты 3",
+          "amount": 20
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Мешочек 5",
+      "desciption": "Описание мешочка 5",
+      "composition": [
+        {
+          "title": "Конфеты 1",
+          "amount": 5
+        },
+        {
+          "title": "Конфеты 2",
+          "amount": 15
+        },
+        {
+          "title": "Конфеты 3",
+          "amount": 20
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Мешочек 6",
+      "desciption": "Описание мешочка 6",
+      "composition": [
+        {
+          "title": "Конфеты 1",
+          "amount": 5
+        },
+        {
+          "title": "Конфеты 2",
+          "amount": 15
+        },
+        {
+          "title": "Конфеты 3",
+          "amount": 20
+        }
+      ]
+    }
+  ]
+}

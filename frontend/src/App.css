@@ -1,0 +1,78 @@
+/* Navigation */
+.navigation {
+  margin: 0;
+  padding: 0;
+  margin-left: 60px;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+}
+.navigation li {
+  list-style: none;
+}
+.navigation__link,
+.navigation__phone {
+  padding: 10px;
+  color: lightgrey;
+  transition: all 0.2s ease;
+}
+.navigation__link:hover,
+.navigation__phone:hover {
+  color: grey;
+  text-decoration: none;
+}
+
+/* Gifts Page */
+.gifts-page {
+  padding: 40px 0;
+}
+
+/* Promo */
+.promo {
+  margin-bottom: 0;
+}
+
+/* Categories */
+.categories {
+  padding: 40px 0;
+}
+
+/* Category List */
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Category Item */
+.category-item {
+  margin-top: 20px;
+  width: 24%;
+}
+
+/* Card List */
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Card Item */
+.card-item {
+  width: 24%;
+  margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px 0;
+  flex-wrap: wrap;
+}
+.footer__copyright-box {
+  margin-top: 20px;
+}
+.footer__copyright-text {
+  display: inline-block;
+  opacity: 0.3;
+  color: #fff;
+}

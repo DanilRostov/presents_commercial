@@ -1,0 +1,7 @@
+const cardListActionTypes = {
+  FETCH_GIFTS_REQUEST: 'FETCH_GIFTS_REQUEST',
+  FETCH_GIFTS_SUCCESS: 'FETCH_GIFTS_SUCCESS',
+  FETCH_GIFTS_FAILURE: 'FETCH_GIFTS_FAILURE'
+};
+
+export default cardListActionTypes;
