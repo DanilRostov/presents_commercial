@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+
 import { Container } from 'reactstrap';
 
-import CardList from '../CardList';
+import CardListContainer from '../../containers/CardListContainer';
 import PAGE_TITLES from '../../constants/pageTitles';
 
 class GiftsPage extends Component {
@@ -11,7 +12,7 @@ class GiftsPage extends Component {
         <Container>
           <h2 className="gifts-page__title">{this.getPageTitleValue()}</h2>
         </Container>
-        <CardList 
+        <CardListContainer 
           page={this.props.page}
         />
       </div>

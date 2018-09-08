@@ -1,28 +1,37 @@
 import cardListActionTypes from '../actions/cardListAT';
 
 const {
-  FETCH_GIFTS_REQUEST,
-  FETCH_GIFTS_SUCCESS,
-  FETCH_GIFTS_FAILURE
+  FETCH_START_GIFTS_REQUEST,
+  FETCH_START_GIFTS_SUCCESS,
+  FETCH_START_GIFTS_FAILURE,
+  FETCH_MORE_GIFTS_REQUEST,
+  FETCH_MORE_GIFTS_SUCCESS,
+  FETCH_MORE_GIFTS_FAILURE
 } = cardListActionTypes;
 
-const initialState = {
-  loadedGifts: []
-};
-
-export default function cardList(state = initialState, action) {
-  switch (action.type) {
-    case FETCH_GIFTS_REQUEST:
+export default function cardList(state = { loadedGifts: []}, { type, gifts }) {
+  switch (type) {
+    case FETCH_START_GIFTS_REQUEST:
+      return {
+        ...state
+      };
+    case FETCH_START_GIFTS_SUCCESS:
       return {
         ...state,
-        loadedGifts: []
+        loadedGifts: gifts
       };
-    case FETCH_GIFTS_SUCCESS:
+    case FETCH_START_GIFTS_FAILURE:
+      return state;
+    case FETCH_MORE_GIFTS_REQUEST:
+      return {
+        ...state
+      };
+    case FETCH_MORE_GIFTS_SUCCESS:
       return {
         ...state,
-        loadedGifts: action.payload
+        loadedGifts: [...state.loadedGifts, ...gifts]
       };
-    case FETCH_GIFTS_FAILURE:
+    case FETCH_MORE_GIFTS_FAILURE:
       return state;
     default:
       return state;
