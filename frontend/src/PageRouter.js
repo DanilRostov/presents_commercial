@@ -3,8 +3,7 @@ import { BrowserRouter as Router, Route} from "react-router-dom";
 
 import Header from './components/Header';
 import Footer from './components/Footer';
-import HomePage from './components/HomePage';
-import GiftsPage from './components/GiftsPage';
+import routes from './routes';
 
 class PageRouter extends Component {
   render() {
@@ -12,25 +11,12 @@ class PageRouter extends Component {
       <Router>
         <div className="app">
           <Header />
-          <Route
-            exact
-            path="/"
-            render={(props) => <HomePage/>}
-          />
-          <Route
-            exact
-            path="/toys"
-            render={(props) => <GiftsPage
-              page={'toys'}
-            />}
-          />
-          <Route
-            exact
-            path="/bags"
-            render={(props) => <GiftsPage
-              page={'bags'}
-            />}
-          />
+          {routes.map((route, idx) => <Route 
+            key={idx}
+            exact={route.exact}
+            path={route.path}
+            render={route.render}
+          />)}
           <Footer />
         </div>
       </Router>
