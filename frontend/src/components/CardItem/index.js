@@ -31,7 +31,7 @@ class CardItem extends Component {
     const { id, name, desciption, composition, index, selectedPage } = this.props;
     return (
       <Card className="card-item">
-        <CardImg top width="100%" src={`${BASE_URL}/images/${selectedPage}/${index}`} alt="Card image cap" />
+        <CardImg className="card-item__img" top width="100%" src={`${BASE_URL}/images/${selectedPage}/${index}`} alt="Card image cap" />
         <CardBody>
           <CardTitle>{name}</CardTitle>
           <CardText>{desciption}</CardText>

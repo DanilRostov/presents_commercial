@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const db = require('./config/keys').mongoURI;
 const app = express();
 const path = require('path');
+const fs = require('fs');
 const cors = require('cors');
 
 const toys = require('./routes/toys');
@@ -34,7 +35,14 @@ app.use('/', bags);
 app.get('/images/:page/:id', function (req, res) {
   const imageId = req.params.id;
   const page = req.params.page;
-  res.sendFile(path.join(__dirname, './images', `${page}`, `${imageId}.jpg`));
+  const pathToImg = path.join(__dirname, './images', `${page}`, `${imageId}.jpg`);
+  fs.open(pathToImg, 'r', function (err) {
+    if (err) {
+      res.status(503).send('no such file');
+    } else {
+      res.sendFile(pathToImg);
+    }
+  });
 });
 
 app.listen(port, () => console.log(`Server started on port ${port}`));
