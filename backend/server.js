@@ -31,9 +31,10 @@ app.get('/', (req, res) => {
 app.use('/', toys);
 app.use('/', bags);
 
-app.get('/images/:id', function (req, res) {
-  var imageId = req.params.id
-  res.sendFile(path.join(__dirname, './images', `${imageId}.jpg`));
+app.get('/images/:page/:id', function (req, res) {
+  const imageId = req.params.id;
+  const page = req.params.page;
+  res.sendFile(path.join(__dirname, './images', `${page}`, `${imageId}.jpg`));
 });
 
 app.listen(port, () => console.log(`Server started on port ${port}`));

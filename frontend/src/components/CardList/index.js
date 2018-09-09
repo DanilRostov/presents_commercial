@@ -23,13 +23,15 @@ class CardList extends Component {
 
   renderCardItems() {
     if (this.props.gifts) {
-      return (this.props.gifts.map(gift => 
+      return (this.props.gifts.map((gift, index) => 
         <CardItem
           key={gift._id}
           id={gift._id}
+          index={index}
           name={gift.name}
           desciption={gift.desciption}
           composition={gift.composition}
+          selectedPage={this.props.selectedPage}
         />
       ));
     } 

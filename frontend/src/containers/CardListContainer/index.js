@@ -36,6 +36,7 @@ class CardListContainer extends Component {
         gifts={this.props.loadedGifts}
         onLoadGifts={this.loadMoreGifts}
         isLoading={this.props.isLoading}
+        selectedPage={this.props.page}
       />
     );
   }

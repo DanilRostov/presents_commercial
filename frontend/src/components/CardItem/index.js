@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import uuid from 'uuid';
+import { BASE_URL } from '../../constants/API';
 
 import {
   Card,
@@ -27,10 +28,10 @@ class CardItem extends Component {
   }
 
   render() {
-    const { id, name, desciption, composition } = this.props;
+    const { id, name, desciption, composition, index, selectedPage } = this.props;
     return (
       <Card className="card-item">
-        <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
+        <CardImg top width="100%" src={`${BASE_URL}/images/${selectedPage}/${index}`} alt="Card image cap" />
         <CardBody>
           <CardTitle>{name}</CardTitle>
           <CardText>{desciption}</CardText>
