@@ -14,7 +14,7 @@ const toys = require('./routes/toys');
 const bags = require('./routes/bags');
 
 const corsDomains = {
-  origin: ['http://localhost:3000', 'http://192.168.0.6:3000', 'http://localhost:8080']
+  origin: ['http://localhost:3000', 'https://afternoon-crag-19611.herokuapp.com', 'http://192.168.0.6:3000', 'http://localhost:8080']
 };
 
 app.use(cors(corsDomains));
