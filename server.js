@@ -26,9 +26,9 @@ mongoose
   .then(() => console.log('MongoDB connected...'))
   .catch(err => console.log(err));
 
-app.get('/', (req, res) => {
-  res.status(200).send('server is working');
-});
+// app.get('/', (req, res) => {
+//   res.status(200).send('server is working');
+// });
 
 app.use('/', toys);
 app.use('/', bags);
