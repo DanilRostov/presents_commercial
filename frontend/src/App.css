@@ -2,7 +2,6 @@
 .navigation {
   margin: 0;
   padding: 0;
-  margin-left: 60px;
   display: flex;
   flex-grow: 1;
   align-items: center;
@@ -22,6 +21,12 @@
   text-decoration: none;
 }
 
+@media screen and(min-width: 575px) {
+  .navigation {
+    margin-left: 60px;
+  }
+}
+
 /* Gifts Page */
 .gifts-page {
   position: relative;
@@ -30,7 +35,12 @@
 
 /* Promo */
 .promo {
+  background: url('./components/Promo/backgroung.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   margin-bottom: 0;
+  border-radius: 0;
 }
 
 /* Categories */
@@ -48,7 +58,21 @@
 /* Category Item */
 .category-item {
   margin-top: 20px;
-  width: 24%;
+  width: 100%;
+}
+.category-item__img-box img {
+  object-fit: contain;
+  height: 320px;
+}
+@media screen and (min-width: 768px) {
+  .category-item {
+    width: 48%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .category-item {
+    width: 24%;
+  }
 }
 
 /* Card List */
@@ -70,11 +94,22 @@
 
 /* Card Item */
 .card-item {
-  width: 24%;
+  width: 100%;
   margin-top: 20px;
 }
-.card-item__img {
-  height: 300px;
+.card-item__img-box img {
+  object-fit: contain;
+  height: 320px;
+}
+@media screen and (min-width: 768px) {
+  .card-item {
+    width: 48%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card-item {
+    width: 24%;
+  }
 }
 
 /* Footer */

@@ -15,7 +15,7 @@ class CardList extends Component {
           {this.renderCardItems()}
         </Container>
         <Container className={`card-list__btn-more-box${btnIsLoadingModificator}`}>
-          <Button color="primary" onClick={this.props.onLoadGifts}>Показать ещё</Button>
+          <Button color="success" onClick={this.props.onLoadGifts}>Показать ещё</Button>
         </Container>
       </Fragment>
     );

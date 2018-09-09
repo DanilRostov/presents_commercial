@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { BASE_URL } from '../../constants/API';
 
 import {
   Card,
@@ -12,14 +13,17 @@ import {
 
 class CategoryItem extends Component {
   render() {
+    const { categoryId, name, description } = this.props;
     return (
       <Card className="category-item">
-        <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Category image cap"/>
+        <div className="category-item__img-box">
+          <CardImg top width="100%" src={`${BASE_URL}/images/${categoryId}/1`}/>
+        </div>
         <CardBody>
-          <CardTitle>{this.props.name}</CardTitle>
-          <CardText>{this.props.description}</CardText>
-          <Link to={`/${this.props.link}`}>
-            <Button color="primary">Перейти в каталог</Button>
+          <CardTitle>{name}</CardTitle>
+          <CardText>{description}</CardText>
+          <Link to={`/${categoryId}`}>
+            <Button color="success">Перейти в каталог</Button>
           </Link>
         </CardBody>
       </Card>

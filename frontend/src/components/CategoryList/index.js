@@ -24,7 +24,7 @@ class CategoryList extends Component {
     return(
       CATEGORIES.map(category => <CategoryItem 
         key={category.ID}
-        link={category.ID}
+        categoryId={category.ID}
         name={category.NAME}
         description={category.DESCRIPTION}
       />)

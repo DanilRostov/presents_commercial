@@ -31,11 +31,13 @@ class CardItem extends Component {
     const { id, name, desciption, composition, index, selectedPage } = this.props;
     return (
       <Card className="card-item">
-        <CardImg className="card-item__img" top width="100%" src={`${BASE_URL}/images/${selectedPage}/${index}`} alt="Card image cap" />
-        <CardBody>
+        <div className="card-item__img-box">
+          <CardImg top width="100%" src={`${BASE_URL}/images/${selectedPage}/${index}`} alt="Card image cap" />
+        </div>
+        <CardBody className="card-item__body">
           <CardTitle>{name}</CardTitle>
           <CardText>{desciption}</CardText>
-          <Button id={`Popover-${id}`} onClick={this.toggle} color="primary">Показать состав</Button>
+          <Button id={`Popover-${id}`} onClick={this.toggle} color="success">Показать состав</Button>
         </CardBody>
         <Popover placement="bottom" isOpen={this.state.popoverOpen} target={`Popover-${id}`} toggle={this.toggle}>
           <PopoverHeader>Состав подарка "{name}"</PopoverHeader>

@@ -14,7 +14,7 @@ class Promo extends Component {
             <p>Изучите каталог с нашими подарками и позвоните нам. Ответим на любые вопросы.</p>
             <p className="lead">
               <ScrollLink to="categories" spy={true} smooth={true} duration={500} >
-                <Button color="primary">Изучить каталог</Button>
+                <Button color="success">Изучить каталог</Button>
               </ScrollLink>
             </p>
           </Container>
