@@ -9,30 +9,46 @@ const {
   FETCH_MORE_GIFTS_FAILURE
 } = cardListActionTypes;
 
-export default function cardList(state = { loadedGifts: []}, { type, gifts }) {
+export default function cardList(state = { loadedGifts: []}, { type, isLoading, isError, gifts }) {
   switch (type) {
     case FETCH_START_GIFTS_REQUEST:
       return {
-        ...state
+        ...state,
+        isLoading,
+        isError
       };
     case FETCH_START_GIFTS_SUCCESS:
       return {
         ...state,
+        isLoading,
+        isError,
         loadedGifts: gifts
       };
     case FETCH_START_GIFTS_FAILURE:
-      return state;
+      return {
+        state,
+        isLoading,
+        isError
+      };
     case FETCH_MORE_GIFTS_REQUEST:
       return {
-        ...state
+        ...state,
+        isLoading,
+        isError
       };
     case FETCH_MORE_GIFTS_SUCCESS:
       return {
         ...state,
+        isLoading,
+        isError,
         loadedGifts: [...state.loadedGifts, ...gifts]
       };
     case FETCH_MORE_GIFTS_FAILURE:
-      return state;
+      return {
+        state,
+        isLoading,
+        isError
+      };
     default:
       return state;
   }

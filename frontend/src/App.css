@@ -24,6 +24,7 @@
 
 /* Gifts Page */
 .gifts-page {
+  position: relative;
   padding: 40px 0;
 }
 
@@ -56,8 +57,15 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+.card-list--loading {
+  opacity: 0.4;
+}
 .card-list__btn-more-box {
+  margin-top: 40px;
   text-align: center;
+}
+.card-list__btn-more-box--loading {
+  opacity: 0;
 }
 
 /* Card Item */
@@ -78,4 +86,16 @@
   display: inline-block;
   opacity: 0.3;
   color: #fff;
+}
+
+/* Spinner */
+.spinner {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
 }

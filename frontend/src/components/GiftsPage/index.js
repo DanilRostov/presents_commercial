@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 
 import { Container } from 'reactstrap';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 import CardListContainer from '../../containers/CardListContainer';
 import PAGE_TITLES from '../../constants/pageTitles';
+import Spinner from '../Spinner';
 
 class GiftsPage extends Component {
   render() {
@@ -14,6 +17,9 @@ class GiftsPage extends Component {
         </Container>
         <CardListContainer 
           page={this.props.page}
+        />
+        <Spinner
+          isVisible={this.props.cardList.isLoading}
         />
       </div>
     );
@@ -32,4 +38,10 @@ class GiftsPage extends Component {
   }
 }
 
-export default GiftsPage;
+const mapStateToProps = (state) => {
+  return {
+    cardList: state.cardList,
+  }
+};
+
+export default withRouter(connect(mapStateToProps, null)(GiftsPage));

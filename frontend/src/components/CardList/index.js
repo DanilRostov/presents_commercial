@@ -6,12 +6,15 @@ import CardItem from '../CardItem';
 
 class CardList extends Component {
   render() {
+    const { isLoading } = this.props;
+    const cardListIsLoadingModificator = isLoading ? ' card-list--loading' : '';
+    const btnIsLoadingModificator = isLoading ? ' card-list__btn-more-box--loading' : '';
     return (
       <Fragment>
-        <Container className="card-list">
+        <Container className={`card-list${cardListIsLoadingModificator}`}>
           {this.renderCardItems()}
         </Container>
-        <Container className="card-list__btn-more-box">
+        <Container className={`card-list__btn-more-box${btnIsLoadingModificator}`}>
           <Button color="primary" onClick={this.props.onLoadGifts}>Показать ещё</Button>
         </Container>
       </Fragment>

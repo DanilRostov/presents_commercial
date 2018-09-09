@@ -15,7 +15,7 @@ class CardListContainer extends Component {
     const params = {
       giftsType: page,
       start: 0,
-      limit: 5
+      limit: 8
     };
     this.props.fetchStartGifts(params);
   }
@@ -25,7 +25,7 @@ class CardListContainer extends Component {
     const params = {
       giftsType: page,
       start: loadedGifts.length,
-      limit: 5
+      limit: 8
     };
     this.props.fetchMoreGifts(params);
   }
@@ -35,6 +35,7 @@ class CardListContainer extends Component {
       <CardList 
         gifts={this.props.loadedGifts}
         onLoadGifts={this.loadMoreGifts}
+        isLoading={this.props.isLoading}
       />
     );
   }
@@ -42,6 +43,7 @@ class CardListContainer extends Component {
 
 const mapStateToProps = (state) => {
   return {
+    isLoading: state.cardList.isLoading,
     loadedGifts: state.cardList.loadedGifts,
   }
 };
