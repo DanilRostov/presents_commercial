@@ -7,7 +7,7 @@
     "initDb": "node initDB.js",
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "heroku-posbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
   "author": "Danil Rostov",
   "license": "MIT",
