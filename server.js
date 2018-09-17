@@ -14,7 +14,7 @@ const toys = require('./routes/toys');
 const bags = require('./routes/bags');
 
 const corsDomains = {
-  origin: ['http://localhost:3000', 'http://192.168.0.6:3000', 'http://localhost:8080']
+  origin: ['http://localhost:3000', 'https://afternoon-crag-19611.herokuapp.com', 'http://192.168.0.6:3000', 'http://localhost:8080']
 };
 
 app.use(cors(corsDomains));
@@ -26,9 +26,9 @@ mongoose
   .then(() => console.log('MongoDB connected...'))
   .catch(err => console.log(err));
 
-app.get('/', (req, res) => {
-  res.status(200).send('server is working');
-});
+// app.get('/', (req, res) => {
+//   res.status(200).send('server is working');
+// });
 
 app.use('/', toys);
 app.use('/', bags);
@@ -47,12 +47,12 @@ app.get('/images/:page/:id', function (req, res) {
 });
 
 // Serve static asserts if in production
-if(precess.env.NODE_ENV === 'production') {
+if(process.env.NODE_ENV === 'production') {
   // Set static folder
-  app.use(express.static('../frontend/build'));
+  app.use(express.static('frontend/build'));
 
   app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../frontend', 'build', 'index.html'));
+    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
   });
 }
 
